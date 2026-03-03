@@ -441,3 +441,53 @@ vercel --prod
 **Maintained By**: LOW / CODE Agency (via Zo Computer AI)
 **Total Templates**: 15
 **Total Services**: 34
+
+## Service Landing Pages
+
+**Total Services**: 249
+
+### Service Page Structure
+Each service landing page follows AEO (Answer Engine Optimization) principles:
+
+1. **Hero Section**
+   - Category badge
+   - H1 with service title
+   - Hero outcome statement
+   - Hero subheadline with metrics
+   - CTA button (links to lowcode.agency/contact with ref)
+   - **Client logo carousel** (right side, rotating every 3 seconds)
+   - **Client names** (bottom of hero: Medtronic, American Express, Coca-Cola, HP, Citi, Verizon)
+   - **Trust signals** (300+ Apps, 40+ Team, Since 2020)
+
+2. **BLUF Section**
+   - Definition block for AI citation
+   - Under 40 words
+   - Includes keyword with capitalized "Glide"
+
+3. **Pricing Table**
+   - Small & Contained: \$15k-\$30k
+   - Larger System: \$30k-\$70k
+   - ERP-Like System: \$70k-\$100k+
+
+4. **Platform Comparison**
+   - Glide, Bubble, FlutterFlow, Custom Code
+   - Best for, starting price, timeline
+
+5. **Process Section**
+   - Refinement Phase (2-3 weeks)
+   - Development Phase (4-12 weeks)
+   - Maintenance & Growth Phase (ongoing)
+
+6. **FAQ Section** (7 questions)
+   - Question-based H2 headers
+   - Answers under 40 words
+   - Pricing: \$15k starting, \$20k-\$40k typical, \$40k-\$100k+ for complex
+
+7. **Related Templates** (if applicable)
+
+### ClientLogoCarousel Component
+Located at `src/components/ClientLogoCarousel.tsx`
+- Displays rotating client logos
+- Auto-advances every 3 seconds
+- Clickable dots for manual navigation
+- Shows client name below logo
