@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Header, Footer } from '@/components';
-import { ClientLogoCarousel } from '@/components/ClientLogoCarousel';
+import { ClientLogos } from '@/components/ClientLogos';
 import { getServiceBySlug, getAllServiceSlugs, getRelatedServices } from '@/lib/services';
 import { Service } from '@/types';
 import { getTemplateBySlug } from '@/lib/templates';
@@ -131,10 +131,11 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                 </div>
               </div>
               
-              {/* Trust Badges - Hero */}
-              <div className="mt-10 lg:mt-0">
-                <ClientLogoCarousel />
-              </div>
+            </div>
+            
+            {/* Client Logos - Full Width */}
+            <div className="mt-12 pt-8 border-t border-gray-800">
+              <ClientLogos />
             </div>
           </div>
         </section>
