@@ -6,3 +6,4 @@ export { Features } from './Features';
 export { Testimonials } from './Testimonials';
 export { FAQ } from './FAQ';
 export { CTA } from './CTA';
+export { ScreenshotCarousel } from './ScreenshotCarousel';

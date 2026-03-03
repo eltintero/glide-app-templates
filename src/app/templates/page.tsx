@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Header, Footer } from '@/components';
 import { getTemplates } from '@/lib/templates';
+import { getFirstScreenshot } from '@/lib/screenshots';
 
 export const metadata: Metadata = {
   title: 'All Glide Templates',
@@ -72,6 +73,8 @@ export default function TemplatesPage() {
 }
 
 function TemplateCard({ template }: { template: ReturnType<typeof getTemplates>[0] }) {
+  const screenshot = getFirstScreenshot(template.slug);
+  
   return (
     <Link
       href={`/templates/${template.slug}`}
@@ -79,7 +82,14 @@ function TemplateCard({ template }: { template: ReturnType<typeof getTemplates>[
     >
       {/* Image */}
       <div className="relative aspect-[16/10] bg-light-gray">
-        {template.icon ? (
+        {screenshot ? (
+          <Image
+            src={screenshot}
+            alt={template.name}
+            fill
+            className="object-cover"
+          />
+        ) : template.icon ? (
           <Image
             src={template.icon}
             alt={template.name}

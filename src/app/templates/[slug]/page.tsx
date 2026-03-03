@@ -2,7 +2,9 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Header, Footer, FeaturedTemplates } from '@/components';
+import { ScreenshotCarousel } from '@/components/ScreenshotCarousel';
 import { getTemplateBySlug, getTemplates, getAllTemplateSlugs } from '@/lib/templates';
+import { getScreenshotsForTemplate, getFirstScreenshot } from '@/lib/screenshots';
 import { ArrowLeft, ExternalLink, Check } from 'lucide-react';
 
 // Generate static params for all templates
@@ -73,6 +75,7 @@ export default async function TemplatePage({
     );
   }
   
+  const screenshots = getScreenshotsForTemplate(slug);
   const allTemplates = getTemplates();
   const relatedTemplates = allTemplates
     .filter((t) => t.slug !== template.slug)
@@ -99,18 +102,25 @@ export default async function TemplatePage({
         <section className="py-12 lg:py-16">
           <div className="mx-auto max-w-7xl px-6">
             <div className="grid gap-12 lg:grid-cols-2">
-              {/* Left: Image */}
-              <div className="overflow-hidden rounded-xl bg-light-gray">
-                {template.icon ? (
-                  <div className="flex aspect-[4/3] items-center justify-center p-12">
-                    <img 
-                      src={template.icon} 
-                      alt={template.name}
-                      className="max-h-full max-w-full object-contain"
-                    />
+              {/* Left: Screenshot Carousel */}
+              <div>
+                {screenshots.length > 0 ? (
+                  <ScreenshotCarousel 
+                    screenshots={screenshots} 
+                    templateName={template.name} 
+                  />
+                ) : template.icon ? (
+                  <div className="overflow-hidden rounded-xl border border-light-gray bg-white">
+                    <div className="flex aspect-[4/3] items-center justify-center p-12">
+                      <img 
+                        src={template.icon} 
+                        alt={template.name}
+                        className="max-h-full max-w-full object-contain"
+                      />
+                    </div>
                   </div>
                 ) : (
-                  <div className="flex aspect-[4/3] items-center justify-center">
+                  <div className="flex aspect-[4/3] items-center justify-center rounded-xl border border-light-gray bg-light-gray">
                     <div className="h-24 w-24 rounded-xl bg-purple-light/30" />
                   </div>
                 )}
@@ -190,18 +200,28 @@ export default async function TemplatePage({
             <div className="mx-auto max-w-7xl px-6">
               <h2 className="text-2xl font-bold text-near-black">More Templates</h2>
               <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                {relatedTemplates.map((t) => (
+                {relatedTemplates.map((t) => {
+                  const relatedScreenshot = getFirstScreenshot(t.slug);
+                  return (
                   <Link
                     key={t.id}
                     href={`/templates/${t.slug}`}
                     className="group flex flex-col overflow-hidden rounded-xl border border-light-gray bg-white transition-all hover:border-purple-light hover:shadow-lg"
                   >
                     <div className="relative aspect-[16/10] bg-light-gray">
-                      {t.icon ? (
-                        <img
+                      {relatedScreenshot ? (
+                        <Image
+                          src={relatedScreenshot}
+                          alt={t.name}
+                          fill
+                          className="object-cover"
+                        />
+                      ) : t.icon ? (
+                        <Image
                           src={t.icon}
                           alt={t.name}
-                          className="h-full w-full object-contain p-6"
+                          fill
+                          className="object-contain p-6"
                         />
                       ) : (
                         <div className="flex h-full items-center justify-center">
@@ -221,7 +241,8 @@ export default async function TemplatePage({
                       </div>
                     </div>
                   </Link>
-                ))}
+                  );
+                })}
               </div>
             </div>
           </section>

@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Template } from '@/types';
 import { ArrowRight } from 'lucide-react';
+import { getFirstScreenshot } from '@/lib/screenshots';
 
 interface FeaturedTemplatesProps {
   templates: Template[];
@@ -49,14 +50,23 @@ export function FeaturedTemplates({ templates }: FeaturedTemplatesProps) {
 }
 
 function TemplateCard({ template }: { template: Template }) {
+  const screenshot = getFirstScreenshot(template.slug);
+  
   return (
     <Link
       href={`/templates/${template.slug}`}
       className="group flex flex-col overflow-hidden rounded-xl border border-light-gray bg-white transition-all hover:border-purple-light hover:shadow-lg"
     >
-      {/* Image placeholder */}
+      {/* Image */}
       <div className="relative aspect-[16/10] bg-light-gray">
-        {template.icon ? (
+        {screenshot ? (
+          <Image
+            src={screenshot}
+            alt={template.name}
+            fill
+            className="object-cover"
+          />
+        ) : template.icon ? (
           <Image
             src={template.icon}
             alt={template.name}
