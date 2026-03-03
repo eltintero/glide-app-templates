@@ -1,0 +1,122 @@
+[
+  {
+    "name": "Expenses Manager",
+    "slug": "expenses-manager",
+    "description": "Manage your employees expenses in a simple dashboard.",
+    "price": 199.99,
+    "glideUrl": "https://www.glideapps.com/templates/expenses-manager-1u",
+    "icon": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/icon-images%2Fanonymous-0ddaed96-3ccb-4e03-b065-20d48b80b3a6.svg?alt=media&token=d1835543-5ef6-4a64-8cfb-53e20c1a872b"
+  },
+  {
+    "name": "Inventory & Orders Tracker",
+    "slug": "inventory-orders-tracker",
+    "description": "Manage your clients, products and orders with this business oriented template.",
+    "price": 49.99,
+    "glideUrl": "https://www.glideapps.com/templates/inventory-and-orders-tracker-cq",
+    "icon": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/icon-images%2Fanonymous-22d74d2d-cd55-46b8-a518-5804f6adcb67.png?alt=media&token=a06f06db-9a28-4e88-a20f-d811cf3bd14f"
+  },
+  {
+    "name": "Learning Management System (LMS)",
+    "slug": "learning-management-system-lms",
+    "description": "The best learning management system, with modules and lessons, payments, review and more!",
+    "price": 99.99,
+    "glideUrl": "https://www.glideapps.com/templates/learning-management-system-lms-dq",
+    "icon": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/icon-images%2Fanonymous-89692dbf-329f-4217-a33e-2ae90831d258.png?alt=media&token=9b5b49d2-a8b6-44f7-b12f-9974e5e46d07"
+  },
+  {
+    "name": "LCA FAQs",
+    "slug": "lca-faqs",
+    "description": "Have AI help you answer customer queries.",
+    "price": 49.99,
+    "glideUrl": "https://www.glideapps.com/templates/lca-faqs-gp",
+    "icon": null
+  },
+  {
+    "name": "Real Estate Listings",
+    "slug": "real-estate-listings",
+    "description": "Showcase your properties in a professional way, and share with your clients!",
+    "price": 99.99,
+    "glideUrl": "https://www.glideapps.com/templates/real-estate-listings-gp",
+    "icon": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/icon-images%2Fanonymous-85728faa-0560-4512-a0bd-f8b5f39d5e8c.png?alt=media&token=a87e12fd-66bc-4b9a-934d-359f095f364f"
+  },
+  {
+    "name": "Marketing AI Content Generator",
+    "slug": "marketing-ai-content-generator",
+    "description": "Generate content for your company for different social media platforms.",
+    "price": 199.99,
+    "glideUrl": "https://www.glideapps.com/templates/marketing-ai-content-generator-ly",
+    "icon": null
+  },
+  {
+    "name": "Support Ticket System AI Template",
+    "slug": "support-ticket-system-ai",
+    "description": "Manage your helpdesk with this simple to use, robust, AI enhanced app",
+    "price": 199.99,
+    "glideUrl": "https://www.glideapps.com/templates/ticket-and-support-ai-system-mq",
+    "icon": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/icon-images%2Fanonymous-2d27709c-aa03-4f36-8bc5-02d405e627b1.png?alt=media&token=08663770-ec32-4ad1-8d1b-1256b5b3b5a5"
+  },
+  {
+    "name": "My Hotel",
+    "slug": "my-hotel",
+    "description": "Manage and streamline your hotel operations",
+    "price": 49.99,
+    "glideUrl": "https://www.glideapps.com/templates/my-hotel-qa",
+    "icon": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/icon-images%2Fanonymous-ab4250e6-2c23-434b-8123-396fe48b0d86.png?alt=media&token=59fb1172-b17d-44bf-baee-bb32586381a9"
+  },
+  {
+    "name": "KPI Tracker",
+    "slug": "kpi-tracker",
+    "description": "Keep track of your team, their priorities and foster communication internally!",
+    "price": 49.99,
+    "glideUrl": "https://www.glideapps.com/templates/kpi-tracker-bs",
+    "icon": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/icon-images%2Fanonymous-ec295478-4741-4ef5-b6a1-73a0c1daadf9.png?alt=media&token=827ec039-c21d-474d-ba1c-2658865f0090"
+  },
+  {
+    "name": "Match Users",
+    "slug": "match-users",
+    "description": "The best match making app template, fully responsive and easy to use, by the LowCode Agency team.",
+    "price": 49.99,
+    "glideUrl": "https://www.glideapps.com/templates/match-users-cy",
+    "icon": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/icon-images%2Fanonymous-bd7d5eab-3794-40b4-9eb9-65f445d0f6fb.png?alt=media&token=29bd107b-171d-4c7f-9d37-28c7a9e280fe"
+  },
+  {
+    "name": "Salon Beauty",
+    "slug": "salon-beauty",
+    "description": "Manage and streamline your salon operation.",
+    "price": 49.99,
+    "glideUrl": "https://www.glideapps.com/templates/salon-beauty-my",
+    "icon": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/icon-images%2Fanonymous-d17a6a18-b3e3-4b4f-8571-884190a83dca.png?alt=media&token=8183fa5c-2e0b-4196-9259-7e15fe6c65f2"
+  },
+  {
+    "name": "Jobs Portal",
+    "slug": "jobs-portal",
+    "description": "Manage your hiring process more efficiently",
+    "price": 99.99,
+    "glideUrl": "https://www.glideapps.com/templates/jobs-portal-ow",
+    "icon": null
+  },
+  {
+    "name": "Pool Cleaning",
+    "slug": "pool-cleaning",
+    "description": "Manage your service based business with this easy to modify pool cleaning template.",
+    "price": 249.99,
+    "glideUrl": "https://www.glideapps.com/templates/pool-cleaning-rp",
+    "icon": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/icon-images%2Fanonymous-ca4ff491-1825-4cd2-9ae7-b7ca7465b3f0.png?alt=media&token=52fe9afd-276d-4132-8fff-b6c27423779a"
+  },
+  {
+    "name": "Company Dashboard",
+    "slug": "company-dashboard",
+    "description": "Empower Your Business with Seamless Management and Communication",
+    "price": 99.99,
+    "glideUrl": "https://www.glideapps.com/templates/company-dashboard-so",
+    "icon": null
+  },
+  {
+    "name": "Maintenance Portal",
+    "slug": "maintenance-portal",
+    "description": "Manage your assets and their maintenance issues",
+    "price": 99.99,
+    "glideUrl": "https://www.glideapps.com/templates/maintenance-portal-tt",
+    "icon": null
+  }
+]

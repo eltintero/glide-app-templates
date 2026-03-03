@@ -1,0 +1,8 @@
+export { Header } from './Header';
+export { Footer } from './Footer';
+export { Hero } from './Hero';
+export { FeaturedTemplates } from './FeaturedTemplates';
+export { Features } from './Features';
+export { Testimonials } from './Testimonials';
+export { FAQ } from './FAQ';
+export { CTA } from './CTA';
