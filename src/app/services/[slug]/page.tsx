@@ -561,7 +561,7 @@ function generateFAQs(service: Service) {
     },
     {
       question: `How long does it take to build a ${service.keyword}?`,
-      answer: `Most ${service.keyword}s are completed in ${service.timelineWeeks}. This includes the Refinement Phase (requirements & design), Development Phase, and launch. Rush timelines are available for additional cost.`
+      answer: `Most ${service.keyword}s are completed in ${service.timelineWeeks} weeks. This includes the Refinement Phase (requirements & design), Development Phase, and launch. Rush timelines are available for additional cost.`
     },
     {
       question: `Which platform is best for my ${service.keyword}?`,
