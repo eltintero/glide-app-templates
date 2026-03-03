@@ -5,8 +5,9 @@ import { Header, Footer } from '@/components';
 import { getServiceBySlug, getAllServiceSlugs, getRelatedServices } from '@/lib/services';
 import { Service } from '@/types';
 import { getTemplateBySlug } from '@/lib/templates';
-import { getFirstScreenshot } from '@/lib/screenshots';
-import { ArrowRight, Check, Clock, DollarSign, Users, Zap, Shield, BarChart3, MessageSquare, Phone, Mail } from 'lucide-react';
+import { ArrowRight, Check, Clock, DollarSign, Users, Shield } from 'lucide-react';
+
+const CONTACT_URL = 'https://www.lowcode.agency/contact?ref=glideapptemplates.com';
 
 export function generateStaticParams() {
   const slugs = getAllServiceSlugs();
@@ -64,8 +65,6 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
   
   const relatedServices = getRelatedServices(slug, 3);
   const relatedTemplates = service.relatedTemplates?.map(t => getTemplateBySlug(t)).filter(Boolean) || [];
-  
-  // Generate FAQ questions based on service
   const faqs = generateFAQs(service);
   
   return (
@@ -89,51 +88,69 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         <section className="relative overflow-hidden bg-near-black text-white">
           <div className="absolute top-0 left-0 right-0 h-1 bg-lime-accent" />
           <div className="relative mx-auto max-w-7xl px-6 py-16 lg:py-24">
-            <div className="max-w-3xl">
-              <span className="inline-block rounded-full border border-lime-accent/30 bg-lime-accent/10 px-4 py-1.5 text-sm text-white mb-6">
-                {service.category}
-              </span>
-              <h1 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
-                {service.h1}
-              </h1>
-              <p className="mt-6 text-lg text-gray-300">
-                {service.heroOutcome}
-              </p>
-              <p className="mt-2 text-base text-gray-400">
-                {service.heroSubheadline}
-              </p>
-              <div className="mt-8 flex flex-wrap gap-4">
-                <a
-                  href="https://www.lowcode.agency/contact"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center rounded-lg bg-lime-accent px-6 py-3 text-base font-semibold text-near-black transition-all hover:bg-lime-accent/90"
-                >
-                  Get Free Consultation
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </a>
-                <a
-                  href="https://www.lowcode.agency/services/glide-apps-agency"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center rounded-lg border border-gray-600 px-6 py-3 text-base font-semibold text-white transition-all hover:border-lime-accent hover:text-lime-accent"
-                >
-                  Learn About Our Process
-                </a>
+            <div className="lg:grid lg:grid-cols-2 lg:gap-12 lg:items-center">
+              <div className="max-w-2xl">
+                <span className="inline-block rounded-full border border-lime-accent/30 bg-lime-accent/10 px-4 py-1.5 text-sm text-white mb-6">
+                  {service.category}
+                </span>
+                <h1 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
+                  {service.h1}
+                </h1>
+                <p className="mt-6 text-lg text-gray-300">
+                  {service.heroOutcome}
+                </p>
+                <p className="mt-2 text-base text-gray-400">
+                  {service.heroSubheadline}
+                </p>
+                <div className="mt-8 flex flex-wrap gap-4">
+                  <a
+                    href={CONTACT_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center rounded-lg bg-lime-accent px-6 py-3 text-base font-semibold text-near-black transition-all hover:bg-lime-accent/90"
+                  >
+                    Get Free Consultation
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </a>
+                </div>
+                {/* Trust signals */}
+                <div className="mt-10 flex flex-wrap items-center gap-6">
+                  <div className="flex items-center gap-2">
+                    <Check className="h-5 w-5 text-lime-accent" />
+                    <span className="text-sm text-gray-300">300+ Apps</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Check className="h-5 w-5 text-lime-accent" />
+                    <span className="text-sm text-gray-300">40+ Team</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Check className="h-5 w-5 text-lime-accent" />
+                    <span className="text-sm text-gray-300">Since 2020</span>
+                  </div>
+                </div>
               </div>
-              {/* Trust signals */}
-              <div className="mt-10 flex flex-wrap items-center gap-6">
-                <div className="flex items-center gap-2">
-                  <Check className="h-5 w-5 text-lime-accent" />
-                  <span className="text-sm text-gray-300">300+ Apps Delivered</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Check className="h-5 w-5 text-lime-accent" />
-                  <span className="text-sm text-gray-300">40+ Person Team</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Check className="h-5 w-5 text-lime-accent" />
-                  <span className="text-sm text-gray-300">Since 2020</span>
+              
+              {/* Trust Badges - Hero */}
+              <div className="mt-10 lg:mt-0">
+                <div className="rounded-xl border border-gray-700 bg-gray-800/50 p-6">
+                  <p className="text-sm text-gray-400 mb-4 text-center">Trusted by leading companies</p>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="rounded-lg bg-white/5 p-4 flex items-center justify-center">
+                      <img src="/badges/clutch-5-stars.svg" alt="Clutch 5 Stars" className="h-10" />
+                    </div>
+                    <div className="rounded-lg bg-white/5 p-4 flex items-center justify-center">
+                      <img src="/badges/glide-premium-expert.svg" alt="Glide Premium Expert" className="h-10" />
+                    </div>
+                    <div className="rounded-lg bg-white/5 p-4 flex items-center justify-center">
+                      <img src="/badges/50pros-badge.svg" alt="50Pros" className="h-10" />
+                    </div>
+                    <div className="rounded-lg bg-white/5 p-4 flex items-center justify-center">
+                      <img src="/badges/top-glade-agency.svg" alt="Top Glide Agency" className="h-10" />
+                    </div>
+                  </div>
+                  <p className="mt-4 text-xs text-gray-500 text-center">
+                    Enterprise clients: Medtronic, American Express, Coca-Cola
+                  </p>
                 </div>
               </div>
             </div>
@@ -243,24 +260,21 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                         <tr>
                           <td className="px-4 py-3 font-medium">ERP-Like System</td>
                           <td className="px-4 py-3">$70,000 - $100,000+</td>
-                          <td className="px-4 py-3">Enterprise, complex integrations</td>
+                          <td className="px-4 py-3">Enterprise-wide, complex workflows</td>
                           <td className="px-4 py-3">10-16 weeks</td>
                         </tr>
                       </tbody>
                     </table>
                   </div>
-                  <blockquote className="mt-6 border-l-4 border-lime-accent pl-4 italic text-dark-gray">
-                    Fixed-price proposals mean no scope creep or surprise invoices. You know exactly what you&apos;re getting and what it costs before development begins.
-                  </blockquote>
                 </div>
                 
-                {/* Timeline Section */}
+                {/* Process Section */}
                 <div>
                   <h2 className="text-2xl font-bold text-near-black mb-4">
-                    How Long Does It Take to Build a {service.category} App?
+                    What Is the Development Process?
                   </h2>
                   <p className="text-dark-gray mb-4">
-                    <strong>Quick Answer:</strong> Most {service.category.toLowerCase()} apps are delivered in {service.timelineWeeks}, including the Refinement Phase (requirements & design), Development Phase, and launch. Complex integrations or enterprise requirements may extend the timeline.
+                    <strong>Quick Answer:</strong> Our three-phase process ensures you get exactly what you need: Refinement (requirements & design), Development (building with weekly demos), and Maintenance & Growth (ongoing support).
                   </p>
                   <div className="mt-6 space-y-4">
                     <div className="flex items-start gap-4 rounded-lg border border-light-gray bg-white p-4">
@@ -353,27 +367,27 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                           <th className="px-4 py-3 rounded-tl-lg">Factor</th>
                           <th className="px-4 py-3">LowCode Agency</th>
                           <th className="px-4 py-3">Traditional Dev</th>
-                          <th className="px-4 py-3 rounded-tr-lg">Freelancer/DIY</th>
+                          <th className="px-4 py-3 rounded-tr-lg">DIY Platform</th>
                         </tr>
                       </thead>
                       <tbody className="divide-y divide-light-gray bg-white">
                         <tr>
                           <td className="px-4 py-3 font-medium">Timeline</td>
-                          <td className="px-4 py-3">{service.timelineWeeks}</td>
-                          <td className="px-4 py-3">6-12 months</td>
-                          <td className="px-4 py-3">3-6 months</td>
+                          <td className="px-4 py-3">4-12 weeks</td>
+                          <td className="px-4 py-3">3-12 months</td>
+                          <td className="px-4 py-3">Varies widely</td>
                         </tr>
                         <tr>
                           <td className="px-4 py-3 font-medium">Cost</td>
                           <td className="px-4 py-3">$15k-$100k</td>
-                          <td className="px-4 py-3">$150k-$500k+</td>
-                          <td className="px-4 py-3">$5k-$50k</td>
+                          <td className="px-4 py-3">$100k-$500k+</td>
+                          <td className="px-4 py-3">$0-$50k (time cost)</td>
                         </tr>
                         <tr>
                           <td className="px-4 py-3 font-medium">Team</td>
-                          <td className="px-4 py-3">3-5 specialists</td>
-                          <td className="px-4 py-3">5-15 engineers</td>
-                          <td className="px-4 py-3">1-2 generalists</td>
+                          <td className="px-4 py-3">Dedicated PM + devs</td>
+                          <td className="px-4 py-3">Requires hiring</td>
+                          <td className="px-4 py-3">Self-managed</td>
                         </tr>
                         <tr>
                           <td className="px-4 py-3 font-medium">Support</td>
@@ -419,44 +433,18 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                 <div className="sticky top-24 space-y-6">
                   {/* CTA Card */}
                   <div className="rounded-xl bg-near-black p-6 text-white">
-                    <h3 className="text-lg font-bold">Ready to Build Your {service.category} App?</h3>
+                    <h3 className="text-lg font-bold">Ready to Build?</h3>
                     <p className="mt-2 text-sm text-gray-300">
                       Get a free consultation and fixed-price proposal within 48 hours.
                     </p>
                     <a
-                      href="https://www.lowcode.agency/contact"
+                      href={CONTACT_URL}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="mt-4 flex w-full items-center justify-center rounded-lg bg-lime-accent px-4 py-3 text-sm font-semibold text-near-black transition-all hover:bg-lime-accent/90"
                     >
                       Schedule Free Consultation
                     </a>
-                    <div className="mt-4 flex items-center justify-center gap-4 text-sm text-gray-400">
-                      <a href="tel:+1-888-888-8888" className="flex items-center gap-1 hover:text-white">
-                        <Phone className="h-4 w-4" />
-                        Call Us
-                      </a>
-                      <a href="mailto:hey@lowcode.agency" className="flex items-center gap-1 hover:text-white">
-                        <Mail className="h-4 w-4" />
-                        Email
-                      </a>
-                    </div>
-                  </div>
-                  
-                  {/* Trust Badges */}
-                  <div className="rounded-xl border border-light-gray bg-white p-6">
-                    <h3 className="font-semibold text-near-black mb-4">Trusted By</h3>
-                    <div className="grid grid-cols-2 gap-4">
-                      <div className="rounded-lg bg-light-gray p-3 text-center">
-                        <img src="/badges/clutch-5-stars.svg" alt="Clutch 5 Stars" className="h-12 mx-auto" />
-                      </div>
-                      <div className="rounded-lg bg-light-gray p-3 text-center">
-                        <img src="/badges/glide-premium-expert.svg" alt="Glide Premium Expert" className="h-12 mx-auto" />
-                      </div>
-                    </div>
-                    <p className="mt-4 text-sm text-dark-gray text-center">
-                      Highest-rated Glide Agency
-                    </p>
                   </div>
                   
                   {/* Related Templates */}
@@ -542,23 +530,15 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               Join 300+ companies that have launched their apps with LowCode Agency. 
               Get a free consultation and fixed-price proposal within 48 hours.
             </p>
-            <div className="mt-8 flex flex-wrap justify-center gap-4">
+            <div className="mt-8">
               <a
-                href="https://www.lowcode.agency/contact"
+                href={CONTACT_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center rounded-lg bg-lime-accent px-8 py-3 text-base font-semibold text-near-black transition-all hover:bg-lime-accent/90"
               >
                 Get Free Consultation
                 <ArrowRight className="ml-2 h-4 w-4" />
-              </a>
-              <a
-                href="https://www.lowcode.agency/about"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center rounded-lg border border-gray-600 px-8 py-3 text-base font-semibold text-white transition-all hover:border-white"
-              >
-                Learn About Us
               </a>
             </div>
             <p className="mt-6 text-sm text-gray-400">

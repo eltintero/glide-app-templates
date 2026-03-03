@@ -14,35 +14,24 @@ Landing page for **glideapptemplates.com** showcasing LowCode Agency's Glide tem
 
 ```
 glide-app-templates/
+├── data/
+│   ├── templates.json      # Template data (15 templates)
+│   └── services.json       # Service landing pages (29 services)
+├── public/
+│   ├── badges/             # Trust badges (Clutch, Glide, etc.)
+│   └── screenshots/        # Template screenshots
 ├── src/
 │   ├── app/
-│   │   ├── page.tsx                    # Homepage
-│   │   ├── layout.tsx                  # Root layout with metadata
-│   │   ├── globals.css                 # Global styles + Tailwind
-│   │   ├── sitemap.ts                  # Dynamic sitemap
-│   │   ├── robots.ts                   # Robots.txt
-│   │   ├── icon.tsx                    # Dynamic favicon (purple slash)
-│   │   ├── apple-icon.tsx              # Apple touch icon
-│   │   └── templates/
-│   │       ├── page.tsx                # All templates listing
-│   │       └── [slug]/
-│   │           └── page.tsx            # Individual template pages (SEO-optimized)
-│   ├── components/
-│   │   ├── Header.tsx                  # Black header with lime accent, logo
-│   │   ├── Footer.tsx                  # Logo + links
-│   │   ├── Hero.tsx                    # Black background, lime accents
-│   │   ├── FeaturedTemplates.tsx       # Top 6 templates by price
-│   │   ├── Features.tsx                # Why choose us section
-│   │   ├── Testimonials.tsx            # Client testimonials
-│   │   ├── FAQ.tsx                     # Accordion FAQ
-│   │   ├── CTA.tsx                     # Call to action section
-│   │   ├── ScreenshotCarousel.tsx      # Carousel for template screenshots
-│   │   └── index.ts                    # Barrel exports
+│   │   ├── services/
+│   │   │   ├── page.tsx         # Services index
+│   │   │   └── [slug]/page.tsx  # Individual service pages
+│   │   └── ...
 │   ├── lib/
-│   │   ├── templates.ts                # Template data fetching + helpers
-│   │   └── screenshots.ts              # Screenshot filename mapping
+│   │   ├── templates.ts         # Template utilities
+│   │   ├── services.ts          # Service utilities
+│   │   └── screenshots.ts       # Screenshot mapping
 │   └── types/
-│       └── index.ts                    # TypeScript interfaces
+│       └── index.ts             # TypeScript types (Template, Service)
 ├── data/
 │   └── templates.json                  # Template data (15 templates)
 ├── public/
@@ -62,6 +51,12 @@ glide-app-templates/
 - **`data/templates.json`** - Contains all template data
   - Fields: `name`, `slug`, `description`, `price`, `glideUrl`, `icon`
   - Optional: `longDescription`, `features`, `category`, `screenshots`
+
+### Adding/Updating Services
+- **`data/services.json`** - Contains all service landing pages
+  - Fields: `slug`, `title`, `metaDescription`, `h1`, `bluf`, `category`, `heroOutcome`, `heroSubheadline`, `platforms[]`, `startingPrice`, `timelineWeeks`, `relatedTemplates[]`
+  - Each service has its own SEO metadata and content
+  - Related templates link to relevant Glide templates
 
 ### Adding Screenshots
 1. Add screenshot files to `/public/screenshots/`
@@ -104,6 +99,23 @@ glide-app-templates/
 3. `getScreenshots(slug)` returns array of screenshot paths
 4. `ScreenshotCarousel` displays with navigation
 5. Related templates shown at bottom (excludes current)
+
+### Services Listing (`/services`)
+1. `getServices()` returns all 29 services
+2. Services grouped by category
+3. Cards show price and timeline
+
+### Service Detail (`/services/[slug]`)
+1. `generateStaticParams()` creates all 29 pages at build time
+2. `getServiceBySlug(slug)` fetches service data
+3. Page follows AEO (Answer Engine Optimization) structure:
+   - BLUF definition block for AI citation
+   - Question-based H2 headers
+   - Quick answers (under 40 words)
+   - Quotable blocks with metrics
+   - Comparison tables
+   - FAQ section (7 questions)
+4. All CTAs link to lowcode.agency/contact
 
 ## Screenshot Mapping
 
