@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Header, Footer } from '@/components';
+import { ClientLogoCarousel } from '@/components/ClientLogoCarousel';
 import { getServiceBySlug, getAllServiceSlugs, getRelatedServices } from '@/lib/services';
 import { Service } from '@/types';
 import { getTemplateBySlug } from '@/lib/templates';
@@ -556,7 +557,7 @@ function generateFAQs(service: Service) {
   return [
     {
       question: `How much does a ${service.keyword} cost?`,
-      answer: `$A {service.keyword} from LowCode Agency start at $${service.startingPrice.toLocaleString()}. Most projects fall in the $${service.startingPrice >= 30000 ? '30,000-$70,000' : '15,000-$50,000'} range depending on complexity, integrations, and platform choice. We provide fixed-price proposals after a free discovery call.`
+      answer: `A {service.keyword} from LowCode Agency start at $${service.startingPrice.toLocaleString()}. Most projects fall in the $${service.startingPrice >= 30000 ? '30,000-$70,000' : '15,000-$50,000'} range depending on complexity, integrations, and platform choice. We provide fixed-price proposals after a free discovery call.`
     },
     {
       question: `How long does it take to build a ${service.keyword}?`,

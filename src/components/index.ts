@@ -7,3 +7,4 @@ export { Testimonials } from './Testimonials';
 export { FAQ } from './FAQ';
 export { CTA } from './CTA';
 export { ScreenshotCarousel } from './ScreenshotCarousel';
+export { ClientLogoCarousel } from './ClientLogoCarousel';
