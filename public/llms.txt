@@ -1,0 +1,135 @@
+# LOW / CODE Agency - Glide App Templates
+
+> Premium Glide templates for business applications. Production-ready, customizable, and built by LOW / CODE Agency.
+
+## What We Offer
+
+LOW / CODE Agency provides premium Glide templates designed for real business use cases. Each template is production-ready and can be customized to fit your specific needs.
+
+### Template Categories
+
+- **Business Operations**: CRM, inventory management, project tracking
+- **Service Business**: Field service, scheduling, client management
+- **AI & Automation**: AI-powered workflows, automated processes
+- **Education & Learning**: LMS, training platforms
+- **Finance & Operations**: Expense tracking, asset management
+
+## Available Templates
+
+### Business & Operations
+- **Expenses Manager** ($199) - Manage employee expenses with dashboard, approval workflows, and multi-currency support
+- **Legal Case Manager** ($249) - Comprehensive legal practice management with case tracking and document management
+- **Maintenance Portal** ($99) - Property and facilities maintenance management
+- **Inventory Manager** ($149) - Track inventory, stock levels, and reordering
+
+### Service & Field Operations
+- **My Hotel** ($149) - Hotel management with bookings, guest management, and housekeeping
+- **Construction PM** ($199) - Construction project management with timelines and resource tracking
+- **Service Business Suite** ($179) - Complete service business management
+
+### AI & Automation
+- **AI Content Generator** ($129) - Generate marketing content with AI
+- **AI Workflow Automation** ($149) - Automated business workflows
+
+### Finance
+- **Crypto Portfolio** ($49) - Track cryptocurrency investments
+- **Investment Tracker** ($99) - Portfolio and investment management
+
+### Education
+- **Learning Platform** ($149) - LMS with course management and student tracking
+
+### Specialty
+- **Music & Media** ($79) - Media library and content management
+- **Wedding Planner** ($99) - Wedding planning and vendor management
+- **Real Estate CRM** ($149) - Real estate client and property management
+
+## How It Works
+
+1. **Browse Templates** - Explore our collection of production-ready templates
+2. **Purchase** - Buy directly through Glide's template marketplace
+3. **Customize** - Modify the template to fit your specific needs
+4. **Deploy** - Launch your app in hours, not weeks
+
+## Custom Development
+
+Need something more tailored? LOW / CODE Agency offers custom Glide development services:
+
+- Custom app development
+- Integration with existing systems
+- Workflow automation
+- Data migration
+- Training and support
+
+Contact us at: https://www.lowcode.agency/contact
+
+## About LOW / CODE Agency
+
+LOW / CODE Agency is a leading Glide development agency with 40+ team members serving Fortune 500 clients. We specialize in:
+
+- Glide app development
+- Bubble development
+- FlutterFlow development
+- Make.com automation
+- Webflow development
+- Xano backend development
+- AI automation for enterprises
+
+### Why Choose Us
+
+- **40+ team members** with deep platform expertise
+- **Fortune 500 clients** trust us with their projects
+- **Glide Certified Partner** with proven track record
+- **Full-stack capabilities** from design to deployment
+- **AI-powered solutions** for modern business needs
+
+## Pricing & Licensing
+
+Templates are sold through Glide's official marketplace. Each template includes:
+
+- Lifetime access to the template
+- Documentation and setup guide
+- Community support through Glide
+- Optional customization services available
+
+### Pricing Range
+- Simple templates: $49 - $99
+- Business templates: $99 - $179
+- Enterprise templates: $179 - $249
+
+## Technical Details
+
+### Platforms We Support
+- Glide (primary)
+- Bubble
+- FlutterFlow
+- Make.com
+- Webflow
+- Xano
+
+### Integrations Available
+- Google Workspace (Sheets, Drive, Calendar)
+- Microsoft 365
+- Slack
+- Notion
+- Airtable
+- Custom APIs
+- AI services (OpenAI, Claude)
+
+## Contact & Links
+
+- **Website**: https://www.lowcode.agency
+- **Templates**: https://glideapptemplates.com
+- **Glide Profile**: https://www.glideapps.com/templates/authors/lowcode-2
+- **Contact**: https://www.lowcode.agency/contact
+- **Glide Services**: https://www.lowcode.agency/services/glide-apps-agency
+
+## Social Proof
+
+- Trusted by Fortune 500 companies
+- 40+ team members
+- Multiple platform certifications
+- Years of low-code expertise
+
+---
+
+Built with care by LOW / CODE Agency. Building software that scales, faster.

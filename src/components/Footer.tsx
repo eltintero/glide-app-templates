@@ -9,9 +9,13 @@ export function Footer() {
           {/* Brand */}
           <div className="lg:col-span-2">
             <Link href="/" className="inline-block">
-              <span className="text-2xl font-bold text-near-black">
-                LOW <span className="text-purple-primary">/</span> CODE
-              </span>
+              <Image
+                src="/Logo_agency.svg"
+                alt="LOW / CODE Agency"
+                width={140}
+                height={40}
+                className="h-10 w-auto"
+              />
             </Link>
             <p className="mt-4 max-w-md text-dark-gray">
               Premium Glide templates and custom app development by LOW / CODE Agency. 
