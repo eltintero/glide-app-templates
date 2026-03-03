@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Header, Footer } from '@/components';
+import { SocialProofCarousel } from '@/components/SocialProofCarousel';
 import { ClientLogos } from '@/components/ClientLogos';
 import { getServiceBySlug, getAllServiceSlugs, getRelatedServices } from '@/lib/services';
 import { Service } from '@/types';
@@ -131,9 +132,13 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                 </div>
               </div>
               
+              {/* Social Proof - Right Column */}
+              <div className="mt-10 lg:mt-0">
+                <SocialProofCarousel />
+              </div>
             </div>
             
-            {/* Client Logos - Full Width */}
+            {/* Client Logos - Full Width Below */}
             <div className="mt-12 pt-8 border-t border-gray-800">
               <ClientLogos />
             </div>
