@@ -133,26 +133,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               
               {/* Trust Badges - Hero */}
               <div className="mt-10 lg:mt-0">
-                <div className="rounded-xl border border-gray-700 bg-gray-800/50 p-6">
-                  <p className="text-sm text-gray-400 mb-4 text-center">Trusted by leading companies</p>
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="rounded-lg bg-white/5 p-4 flex items-center justify-center">
-                      <img src="/badges/clutch-5-stars.svg" alt="Clutch 5 Stars" className="h-10" />
-                    </div>
-                    <div className="rounded-lg bg-white/5 p-4 flex items-center justify-center">
-                      <img src="/badges/glide-premium-expert.svg" alt="Glide Premium Expert" className="h-10" />
-                    </div>
-                    <div className="rounded-lg bg-white/5 p-4 flex items-center justify-center">
-                      <img src="/badges/50pros-badge.svg" alt="50Pros" className="h-10" />
-                    </div>
-                    <div className="rounded-lg bg-white/5 p-4 flex items-center justify-center">
-                      <img src="/badges/top-glade-agency.svg" alt="Top Glide Agency" className="h-10" />
-                    </div>
-                  </div>
-                  <p className="mt-4 text-xs text-gray-500 text-center">
-                    Enterprise clients: Medtronic, American Express, Coca-Cola
-                  </p>
-                </div>
+                <ClientLogoCarousel />
               </div>
             </div>
           </div>
