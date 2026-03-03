@@ -178,7 +178,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                 {/* What Does It Include Section */}
                 <div>
                   <h2 className="text-2xl font-bold text-near-black mb-4">
-                    What Does LowCode Agency&apos;s {service.category} Service Include?
+                    What Does LowCode Agency&apos;s {service.keyword} Service Include?
                   </h2>
                   <p className="text-dark-gray mb-4">
                     Every project includes the Refinement Phase (requirements & design), Development Phase (building your app), and Maintenance & Growth Phase (ongoing support). Deliverables include a fully functional application, user documentation, training, and post-launch support.
@@ -229,10 +229,10 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                 {/* Pricing Section */}
                 <div>
                   <h2 className="text-2xl font-bold text-near-black mb-4">
-                    How Much Does {service.category} App Development Cost in 2026?
+                    How Much Does {service.keyword} Development Cost in 2026?
                   </h2>
                   <p className="text-dark-gray mb-4">
-                    Pricing starts at ${service.startingPrice.toLocaleString()} for {service.category.toLowerCase()} apps and scales based on complexity, integrations, and platform choice. Most projects fall into one of three tiers.
+                    Pricing starts at ${service.startingPrice.toLocaleString()} for {service.keyword}s and scales based on complexity, integrations, and platform choice. Most projects fall into one of three tiers.
                   </p>
                   <div className="mt-6 overflow-x-auto">
                     <table className="w-full text-left text-sm">
@@ -304,7 +304,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                 {/* Platform Section */}
                 <div>
                   <h2 className="text-2xl font-bold text-near-black mb-4">
-                    Which Platform Will LowCode Agency Use for My {service.category} App?
+                    Which Platform Will LowCode Agency Use for My {service.keyword}?
                   </h2>
                   <p className="text-dark-gray mb-4">
                     We recommend the optimal platform based on your requirements — Glide for internal tools, Bubble for complex web apps, FlutterFlow for native mobile, and custom code for enterprise systems with AI integration.
@@ -348,7 +348,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                     </table>
                   </div>
                   <blockquote className="mt-6 border-l-4 border-lime-accent pl-4 italic text-dark-gray">
-                    {service.platforms.join(', ')} {service.platforms.length === 1 ? 'is' : 'are'} well-suited for {service.category.toLowerCase()} apps. We&apos;ll recommend the best fit during the Refinement Phase.
+                    {service.platforms.join(', ')} {service.platforms.length === 1 ? 'is' : 'are'} well-suited for {service.keyword}s. We&apos;ll recommend the best fit during the Refinement Phase.
                   </blockquote>
                 </div>
                 
@@ -409,7 +409,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                 {/* FAQ Section */}
                 <div>
                   <h2 className="text-2xl font-bold text-near-black mb-6">
-                    Frequently Asked Questions About {service.category} Apps
+                    Frequently Asked Questions About {service.keyword}s
                   </h2>
                   <div className="space-y-4">
                     {faqs.map((faq, index) => (
@@ -524,7 +524,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         <section className="bg-near-black py-16">
           <div className="mx-auto max-w-7xl px-6 text-center">
             <h2 className="text-2xl font-bold text-white sm:text-3xl">
-              Ready to Build Your Custom {service.category} App?
+              Ready to Build Your Custom {service.keyword}?
             </h2>
             <p className="mt-4 text-gray-300 max-w-2xl mx-auto">
               Join 300+ companies that have launched their apps with LowCode Agency. 
@@ -555,16 +555,16 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
 function generateFAQs(service: Service) {
   return [
     {
-      question: `How much does a ${service.category.toLowerCase()} app cost?`,
-      answer: `${service.category} apps from LowCode Agency start at $${service.startingPrice.toLocaleString()}. Most projects fall in the $${service.startingPrice >= 30000 ? '30,000-$70,000' : '15,000-$50,000'} range depending on complexity, integrations, and platform choice. We provide fixed-price proposals after a free discovery call.`
+      question: `How much does a ${service.keyword} cost?`,
+      answer: `$A {service.keyword} from LowCode Agency start at $${service.startingPrice.toLocaleString()}. Most projects fall in the $${service.startingPrice >= 30000 ? '30,000-$70,000' : '15,000-$50,000'} range depending on complexity, integrations, and platform choice. We provide fixed-price proposals after a free discovery call.`
     },
     {
-      question: `How long does it take to build a ${service.category.toLowerCase()} app?`,
-      answer: `Most ${service.category.toLowerCase()} apps are completed in ${service.timelineWeeks}. This includes the Refinement Phase (requirements & design), Development Phase, and launch. Rush timelines are available for additional cost.`
+      question: `How long does it take to build a ${service.keyword}?`,
+      answer: `Most ${service.keyword}s are completed in ${service.timelineWeeks}. This includes the Refinement Phase (requirements & design), Development Phase, and launch. Rush timelines are available for additional cost.`
     },
     {
-      question: `Which platform is best for my ${service.category.toLowerCase()} app?`,
-      answer: `We recommend the optimal platform based on your requirements. ${service.platforms.join(', ')} ${service.platforms.length === 1 ? 'is' : 'are'} well-suited for ${service.category.toLowerCase()} apps. We'll make a specific recommendation during the Refinement Phase.`
+      question: `Which platform is best for my ${service.keyword}?`,
+      answer: `We recommend the optimal platform based on your requirements. ${service.platforms.join(', ')} ${service.platforms.length === 1 ? 'is' : 'are'} well-suited for ${service.keyword}s. We'll make a specific recommendation during the Refinement Phase.`
     },
     {
       question: `Can I make changes after the app is launched?`,

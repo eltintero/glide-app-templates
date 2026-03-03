@@ -14,6 +14,7 @@ export interface Template {
 
 export interface Service {
   slug: string;
+  keyword: string;  // e.g. "supply chain app"
   title: string;
   metaDescription: string;
   h1: string;
