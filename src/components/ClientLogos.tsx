@@ -1,10 +1,10 @@
 const clients = [
   { name: 'Sotheby\'s', logo: '/clients/sothebys.svg' },
   { name: 'Margaritaville', logo: '/clients/margaritaville.svg' },
-  { name: 'Zapier', logo: '/clients/zapier.svg' },
+  { name: 'Zapier', logo: '/clients/zapier.png' },
   { name: 'Dataiku', logo: '/clients/dataiku.svg' },
-  { name: 'Coca-Cola', logo: '/clients/cocacola.svg' },
-  { name: 'American Express', logo: '/clients/americanexpress.svg' },
+  { name: 'Coca-Cola', logo: '/clients/cocacola.png' },
+  { name: 'American Express', logo: '/clients/americanexpress.png' },
   { name: 'Medtronic', logo: '/clients/medtronic.svg' },
 ];
 
