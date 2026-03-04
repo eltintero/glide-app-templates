@@ -4,7 +4,7 @@ const clients = [
   { name: 'Zapier', logo: '/clients/zapier.svg' },
   { name: 'Dataiku', logo: '/clients/dataiku.svg' },
   { name: 'Coca-Cola', logo: '/clients/cocacola.svg' },
-  { name: 'American Express', logo: '/clients/amex.svg' },
+  { name: 'American Express', logo: '/clients/americanexpress.svg' },
   { name: 'Medtronic', logo: '/clients/medtronic.svg' },
 ];
 
