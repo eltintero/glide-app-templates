@@ -44,7 +44,7 @@ export async function generateMetadata({
       description: template.description,
     },
     alternates: {
-      canonical: `https://glideapptemplates.com/templates/${template.slug}`,
+      canonical: `/templates/${template.slug}`,
     },
   };
 }

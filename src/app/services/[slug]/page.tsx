@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       title: service.title,
       description: service.metaDescription,
       type: 'website',
-      url: `https://glideapptemplates.com/services/${service.slug}`,
+      url: `/services/${service.slug}`,
     },
     twitter: {
       card: 'summary_large_image',
@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       description: service.metaDescription,
     },
     alternates: {
-      canonical: `https://glideapptemplates.com/services/${service.slug}`,
+      canonical: `/services/${service.slug}`,
     },
   };
 }
