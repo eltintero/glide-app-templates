@@ -9,7 +9,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://glideapptemplates.com'),
+  metadataBase: new URL('https://www.glideapptemplates.com'),
   title: {
     default: 'Glide App Templates | LOW / CODE Agency',
     template: '%s | LOW / CODE Agency',
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://glideapptemplates.com',
+    url: 'https://www.glideapptemplates.com',
     siteName: 'Glide App Templates',
     title: 'Glide App Templates | LOW / CODE Agency',
     description: 'Premium Glide templates for business apps. Production-ready, customizable, and built by LOW / CODE Agency.',
