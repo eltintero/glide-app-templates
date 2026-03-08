@@ -3,7 +3,7 @@ import { getAllTemplateSlugs } from '@/lib/templates';
 import { getAllServiceSlugs } from '@/lib/services';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://glideapptemplates.com';
+  const baseUrl = 'https://www.glideapptemplates.com';
   
   // Get all template and service slugs
   const templateSlugs = getAllTemplateSlugs();
