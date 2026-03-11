@@ -3,7 +3,7 @@ import { getAllTemplateSlugs } from '@/lib/templates';
 import { getAllServiceSlugs } from '@/lib/services';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://www.glideapptemplates.com';
+  const baseUrl = 'https://glideapptemplates.com';
   const lastUpdated = new Date('2026-03-10');
 
   // Static pages

@@ -10,7 +10,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.glideapptemplates.com'),
+  metadataBase: new URL('https://glideapptemplates.com'),
   title: {
     default: 'Glide App Templates | LOW / CODE Agency',
     template: '%s | LOW / CODE Agency',
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://www.glideapptemplates.com',
+    url: 'https://glideapptemplates.com',
     siteName: 'Glide App Templates',
     title: 'Glide App Templates | LOW / CODE Agency',
     description: 'Premium Glide templates for business apps. Production-ready, customizable, and built by LOW / CODE Agency.',
@@ -58,8 +58,8 @@ const organizationJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   name: 'Glide App Templates',
-  url: 'https://www.glideapptemplates.com',
-  logo: 'https://www.glideapptemplates.com/Logo_agency.png',
+  url: 'https://glideapptemplates.com',
+  logo: 'https://glideapptemplates.com/Logo_agency.png',
   description: 'Premium Glide templates and custom app development. 40+ team members, 300+ projects delivered since 2020.',
   parentOrganization: {
     '@type': 'Organization',
@@ -97,7 +97,7 @@ const websiteJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
   name: 'Glide App Templates',
-  url: 'https://www.glideapptemplates.com',
+  url: 'https://glideapptemplates.com',
   publisher: {
     '@type': 'Organization',
     name: 'LOW / CODE Agency',

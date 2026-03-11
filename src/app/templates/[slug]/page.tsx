@@ -98,8 +98,8 @@ export default async function TemplatePage({
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.glideapptemplates.com' },
-      { '@type': 'ListItem', position: 2, name: 'Templates', item: 'https://www.glideapptemplates.com/templates' },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://glideapptemplates.com' },
+      { '@type': 'ListItem', position: 2, name: 'Templates', item: 'https://glideapptemplates.com/templates' },
       { '@type': 'ListItem', position: 3, name: template.name },
     ],
   };

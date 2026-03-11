@@ -92,8 +92,8 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.glideapptemplates.com' },
-      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://www.glideapptemplates.com/services' },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://glideapptemplates.com' },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://glideapptemplates.com/services' },
       { '@type': 'ListItem', position: 3, name: service.h1.split('—')[0].trim() },
     ],
   };
