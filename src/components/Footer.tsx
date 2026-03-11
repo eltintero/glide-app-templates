@@ -52,24 +52,46 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/templates?category=business" className="text-sm text-dark-gray hover:text-purple-primary">
+                <Link href="/templates/category/business-operations" className="text-sm text-dark-gray hover:text-purple-primary">
                   Business Operations
                 </Link>
               </li>
               <li>
-                <Link href="/templates?category=ai" className="text-sm text-dark-gray hover:text-purple-primary">
+                <Link href="/templates/category/ai-automation" className="text-sm text-dark-gray hover:text-purple-primary">
                   AI & Automation
                 </Link>
               </li>
               <li>
-                <Link href="/templates?category=service" className="text-sm text-dark-gray hover:text-purple-primary">
+                <Link href="/templates/category/service-business" className="text-sm text-dark-gray hover:text-purple-primary">
                   Service Business
                 </Link>
               </li>
             </ul>
           </div>
+
+          {/* Services */}
+          <div>
+            <h3 className="font-semibold text-near-black">Services</h3>
+            <ul className="mt-4 space-y-2">
+              <li>
+                <Link href="/services" className="text-sm text-dark-gray hover:text-purple-primary">
+                  All Services
+                </Link>
+              </li>
+              <li>
+                <a
+                  href="https://clutch.co/profile/lowcode-agency#reviews"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-dark-gray hover:text-purple-primary"
+                >
+                  Reviews on Clutch
+                </a>
+              </li>
+            </ul>
+          </div>
           
-          {/* Company */}
+          {/* Company - now shares column with Services above */}
           <div>
             <h3 className="font-semibold text-near-black">Company</h3>
             <ul className="mt-4 space-y-2">

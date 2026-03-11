@@ -28,6 +28,12 @@ export function Header() {
           >
             Templates
           </Link>
+          <Link
+            href="/services"
+            className="text-sm font-medium text-gray-300 transition-colors hover:text-lime-accent"
+          >
+            Services
+          </Link>
           <a
             href="https://www.lowcode.agency/services/glide-apps-agency"
             target="_blank"

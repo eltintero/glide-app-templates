@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://glideapptemplates.com/sitemap.xml',
+    sitemap: 'https://www.glideapptemplates.com/sitemap.xml',
   };
 }

@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
+import { notFound } from 'next/navigation';
 import { Header, Footer } from '@/components';
 import { SocialProofCarousel } from '@/components/SocialProofCarousel';
 import { ClientLogos } from '@/components/ClientLogos';
@@ -47,30 +48,70 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
   const { slug } = await params;
   const service = getServiceBySlug(slug);
   
-  if (!service) {
-    return (
-      <>
-        <Header />
-        <main className="flex min-h-[60vh] items-center justify-center">
-          <div className="text-center">
-            <h1 className="text-2xl font-bold text-near-black">Service Not Found</h1>
-            <p className="mt-4 text-dark-gray">The service you&apos;re looking for doesn&apos;t exist.</p>
-            <Link href="/services" className="mt-6 inline-block text-purple-primary hover:underline">
-              Browse all services
-            </Link>
-          </div>
-        </main>
-        <Footer />
-      </>
-    );
-  }
-  
+  if (!service) notFound();
+
   const relatedServices = getRelatedServices(slug, 3);
   const relatedTemplates = service.relatedTemplates?.map(t => getTemplateBySlug(t)).filter(Boolean) || [];
   const faqs = generateFAQs(service);
+
+  const serviceJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: service.h1.split('—')[0].trim(),
+    description: service.metaDescription,
+    provider: {
+      '@type': 'Organization',
+      name: 'LOW / CODE Agency',
+      url: 'https://www.lowcode.agency',
+    },
+    areaServed: 'Worldwide',
+    offers: {
+      '@type': 'Offer',
+      price: service.startingPrice,
+      priceCurrency: 'USD',
+      priceSpecification: {
+        '@type': 'PriceSpecification',
+        price: service.startingPrice,
+        priceCurrency: 'USD',
+        description: `Starting at $${service.startingPrice.toLocaleString()}`,
+      },
+    },
+  };
+
+  const faqJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+    })),
+  };
+
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.glideapptemplates.com' },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://www.glideapptemplates.com/services' },
+      { '@type': 'ListItem', position: 3, name: service.h1.split('—')[0].trim() },
+    ],
+  };
   
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <Header />
       <main>
         {/* Breadcrumb */}

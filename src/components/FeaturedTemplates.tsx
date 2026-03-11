@@ -62,15 +62,17 @@ function TemplateCard({ template }: { template: Template }) {
         {screenshot ? (
           <Image
             src={screenshot}
-            alt={template.name}
+            alt={`Screenshot of ${template.name} - ${template.category} Glide template`}
             fill
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
             className="object-cover"
           />
         ) : template.icon ? (
           <Image
             src={template.icon}
-            alt={template.name}
+            alt={`${template.name} - ${template.category} Glide template by LOW / CODE Agency`}
             fill
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
             className="object-contain p-8"
           />
         ) : (

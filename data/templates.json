@@ -2,121 +2,301 @@
   {
     "name": "Expenses Manager",
     "slug": "expenses-manager",
-    "description": "Manage your employees expenses in a simple dashboard.",
+    "description": "Track, approve, and report employee expenses with real-time dashboards, multi-currency support, and automated approval workflows. Built on Glide for teams of any size.",
+    "longDescription": "The Expenses Manager template gives your team a complete expense tracking system that works on any device. Employees can snap photos of receipts, log expenses by category, and submit them for manager approval — all from their phone or desktop. Managers get a dashboard view of pending, approved, and rejected claims with spending trends over time. The template supports multiple currencies, custom expense categories, and configurable approval chains. Connect it to Google Sheets or Glide Tables for real-time data sync. Ideal for companies that need visibility into team spending without the overhead of enterprise expense software like Expensify or SAP Concur.",
     "price": 199.99,
     "glideUrl": "https://www.glideapps.com/templates/expenses-manager-1u",
-    "icon": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/icon-images%2Fanonymous-0ddaed96-3ccb-4e03-b065-20d48b80b3a6.svg?alt=media&token=d1835543-5ef6-4a64-8cfb-53e20c1a872b"
+    "icon": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/icon-images%2Fanonymous-0ddaed96-3ccb-4e03-b065-20d48b80b3a6.svg?alt=media&token=d1835543-5ef6-4a64-8cfb-53e20c1a872b",
+    "category": "Finance & Analytics",
+    "features": [
+      "Photo receipt capture from mobile",
+      "Multi-currency expense logging",
+      "Manager approval workflow with notifications",
+      "Real-time spending dashboard with charts",
+      "Custom expense categories and tags",
+      "Export-ready reports for accounting",
+      "Role-based access (employee, manager, admin)",
+      "Google Sheets and Glide Tables support"
+    ]
   },
   {
     "name": "Inventory & Orders Tracker",
     "slug": "inventory-orders-tracker",
-    "description": "Manage your clients, products and orders with this business oriented template.",
+    "description": "Manage clients, products, stock levels, and orders in one unified app. Track inventory in real time, process orders, and get low-stock alerts — all without code.",
+    "longDescription": "The Inventory & Orders Tracker is a business-ready Glide template that connects your product catalog, customer database, and order management into a single app. Add products with photos, SKUs, and pricing. Track stock quantities in real time and receive alerts when items drop below minimum thresholds. Process customer orders with status tracking from placed to fulfilled. The client management module lets you store contact info, order history, and notes per customer. Perfect for small businesses, warehouses, e-commerce operations, or any team that needs to stay on top of inventory without spreadsheet chaos.",
     "price": 49.99,
     "glideUrl": "https://www.glideapps.com/templates/inventory-and-orders-tracker-cq",
-    "icon": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/icon-images%2Fanonymous-22d74d2d-cd55-46b8-a518-5804f6adcb67.png?alt=media&token=a06f06db-9a28-4e88-a20f-d811cf3bd14f"
+    "icon": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/icon-images%2Fanonymous-22d74d2d-cd55-46b8-a518-5804f6adcb67.png?alt=media&token=a06f06db-9a28-4e88-a20f-d811cf3bd14f",
+    "category": "E-commerce",
+    "features": [
+      "Product catalog with photos and SKUs",
+      "Real-time stock level tracking",
+      "Low-stock threshold alerts",
+      "Order processing with status workflow",
+      "Customer database with order history",
+      "Search and filter across products and orders",
+      "Dashboard with inventory value and order metrics",
+      "Barcode/QR code scanning support"
+    ]
   },
   {
     "name": "Learning Management System (LMS)",
     "slug": "learning-management-system-lms",
-    "description": "The best learning management system, with modules and lessons, payments, review and more!",
+    "description": "A complete LMS with course modules, lessons, student progress tracking, quizzes, payments, and certificates. Perfect for training programs, online courses, or internal education.",
+    "longDescription": "This Learning Management System template is the most full-featured LMS available on Glide. Organize content into courses, modules, and individual lessons with support for text, video, and downloadable materials. Students can enroll, track their progress through each module, complete quizzes, and earn certificates upon completion. The admin panel gives instructors visibility into student engagement, completion rates, and quiz scores. Includes a payment integration flow for paid courses. Whether you're running corporate training, selling online courses, or building an internal knowledge base, this template gives you a production-ready learning platform in hours.",
     "price": 99.99,
     "glideUrl": "https://www.glideapps.com/templates/learning-management-system-lms-dq",
-    "icon": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/icon-images%2Fanonymous-89692dbf-329f-4217-a33e-2ae90831d258.png?alt=media&token=9b5b49d2-a8b6-44f7-b12f-9974e5e46d07"
+    "icon": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/icon-images%2Fanonymous-89692dbf-329f-4217-a33e-2ae90831d258.png?alt=media&token=9b5b49d2-a8b6-44f7-b12f-9974e5e46d07",
+    "category": "Education",
+    "features": [
+      "Course, module, and lesson hierarchy",
+      "Video and text lesson support",
+      "Student progress tracking per module",
+      "Built-in quiz and assessment system",
+      "Certificate generation on completion",
+      "Payment integration for paid courses",
+      "Admin dashboard with engagement analytics",
+      "Student enrollment and role management"
+    ]
   },
   {
     "name": "LCA FAQs",
     "slug": "lca-faqs",
-    "description": "Have AI help you answer customer queries.",
+    "description": "An AI-powered FAQ chatbot that answers customer queries instantly using your knowledge base. Reduce support load and improve response times with smart, automated answers.",
+    "longDescription": "The LCA FAQs template uses AI to provide instant, accurate answers to customer questions based on your existing knowledge base. Add your FAQ content, product docs, or support articles, and the AI generates contextual responses in real time. Customers get immediate help without waiting for a human agent, while your team focuses on complex issues. The template includes analytics to see which questions are asked most frequently, helping you identify gaps in your documentation. Works great as a customer-facing support tool, internal HR FAQ, or product documentation assistant. Built with Glide's native AI capabilities — no external API keys required.",
     "price": 49.99,
     "glideUrl": "https://www.glideapps.com/templates/lca-faqs-gp",
-    "icon": null
+    "icon": null,
+    "category": "AI & Automation",
+    "features": [
+      "AI-powered answer generation from your knowledge base",
+      "Natural language query understanding",
+      "Editable FAQ content management",
+      "Analytics on most-asked questions",
+      "No external API keys required (uses Glide AI)",
+      "Customizable response tone and branding",
+      "Fallback to human support when AI can't answer",
+      "Works for customer support, HR, or product docs"
+    ]
   },
   {
     "name": "Real Estate Listings",
     "slug": "real-estate-listings",
-    "description": "Showcase your properties in a professional way, and share with your clients!",
+    "description": "Showcase property listings with photos, details, pricing, and location maps. Share with clients via a professional, branded app that works on any device.",
+    "longDescription": "The Real Estate Listings template gives agents and brokers a polished property showcase app. Add listings with multiple photos, floor plans, pricing, square footage, bedrooms/bathrooms, and detailed descriptions. Properties display on a clean, filterable grid that clients can browse by price range, location, or property type. Each listing has its own detail page with a photo gallery, amenity list, and embedded map. Share the app link with clients for a branded viewing experience that replaces PDF brochures and email attachments. Agents can update listings instantly from their phone — add a new property, mark one as sold, or adjust pricing in seconds.",
     "price": 99.99,
     "glideUrl": "https://www.glideapps.com/templates/real-estate-listings-gp",
-    "icon": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/icon-images%2Fanonymous-85728faa-0560-4512-a0bd-f8b5f39d5e8c.png?alt=media&token=a87e12fd-66bc-4b9a-934d-359f095f364f"
+    "icon": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/icon-images%2Fanonymous-85728faa-0560-4512-a0bd-f8b5f39d5e8c.png?alt=media&token=a87e12fd-66bc-4b9a-934d-359f095f364f",
+    "category": "Real Estate",
+    "features": [
+      "Multi-photo property gallery with swipe",
+      "Filter by price, location, and property type",
+      "Detailed listing pages with amenity lists",
+      "Embedded map with property location",
+      "Status tracking (available, pending, sold)",
+      "Agent contact and inquiry form",
+      "Mobile-first design for on-the-go updates",
+      "Shareable link for client viewing"
+    ]
   },
   {
     "name": "Marketing AI Content Generator",
     "slug": "marketing-ai-content-generator",
-    "description": "Generate content for your company for different social media platforms.",
+    "description": "Generate social media posts, email copy, blog outlines, and ad text for multiple platforms using AI. Save hours on content creation with brand-consistent output.",
+    "longDescription": "The Marketing AI Content Generator template turns content creation from hours into minutes. Select a platform (LinkedIn, Instagram, Twitter, email, blog), describe what you want to communicate, and the AI generates ready-to-use copy tailored to that platform's format and best practices. Save generated content, organize by campaign or channel, and build a content library over time. The template includes tone/voice settings so output stays consistent with your brand. Great for marketing teams, solopreneurs, and agencies who need to produce content at scale without sacrificing quality. Built on Glide's native AI — no OpenAI API key needed.",
     "price": 199.99,
     "glideUrl": "https://www.glideapps.com/templates/marketing-ai-content-generator-ly",
-    "icon": null
+    "icon": null,
+    "category": "AI & Automation",
+    "features": [
+      "AI content generation for 5+ platforms",
+      "Customizable brand voice and tone settings",
+      "Content library with save and organize",
+      "Platform-specific formatting (LinkedIn, Twitter, etc.)",
+      "Campaign and channel tagging",
+      "Bulk content generation for content calendars",
+      "No external API keys required (uses Glide AI)",
+      "Edit, refine, and regenerate with one tap"
+    ]
   },
   {
     "name": "Support Ticket System AI Template",
     "slug": "support-ticket-system-ai",
-    "description": "Manage your helpdesk with this simple to use, robust, AI enhanced app",
+    "description": "Manage your helpdesk with AI-assisted ticket routing, priority classification, and suggested responses. Track issues from submission to resolution with full audit trails.",
+    "longDescription": "This Support Ticket System combines traditional helpdesk functionality with AI intelligence. Customers or team members submit tickets with descriptions and attachments. The AI automatically classifies priority (critical, high, medium, low), suggests a category, and drafts an initial response for the agent to review and send. Agents manage tickets through a Kanban-style board with columns for new, in-progress, waiting, and resolved. Every action is logged for audit trails and SLA tracking. Managers get a dashboard showing response times, resolution rates, and agent workload distribution. Ideal for customer support teams, IT helpdesks, or any organization that handles internal or external requests.",
     "price": 199.99,
     "glideUrl": "https://www.glideapps.com/templates/ticket-and-support-ai-system-mq",
-    "icon": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/icon-images%2Fanonymous-2d27709c-aa03-4f36-8bc5-02d405e627b1.png?alt=media&token=08663770-ec32-4ad1-8d1b-1256b5b3b5a5"
+    "icon": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/icon-images%2Fanonymous-2d27709c-aa03-4f36-8bc5-02d405e627b1.png?alt=media&token=08663770-ec32-4ad1-8d1b-1256b5b3b5a5",
+    "category": "Customer Support",
+    "features": [
+      "AI-powered ticket priority classification",
+      "Automated response drafting for agents",
+      "Kanban board (new, in-progress, waiting, resolved)",
+      "File and screenshot attachments",
+      "Full audit trail and activity log",
+      "SLA tracking with response time metrics",
+      "Manager dashboard with agent workload stats",
+      "Email notification triggers"
+    ]
   },
   {
     "name": "My Hotel",
     "slug": "my-hotel",
-    "description": "Manage and streamline your hotel operations",
+    "description": "Streamline hotel operations with room management, guest check-in/check-out, housekeeping task assignment, and a guest-facing concierge app — all in one template.",
+    "longDescription": "My Hotel is a comprehensive hotel management template that handles the operational side of running a hospitality business. Manage room inventory with status tracking (available, occupied, cleaning, maintenance). Process guest check-ins and check-outs with reservation details and contact info. Assign housekeeping tasks to staff with room-by-room checklists and completion tracking. The guest-facing side lets visitors browse hotel amenities, request services, and communicate with the front desk. Works for boutique hotels, B&Bs, hostels, or vacation rentals that want to digitize their operations without a heavy PMS system.",
     "price": 49.99,
     "glideUrl": "https://www.glideapps.com/templates/my-hotel-qa",
-    "icon": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/icon-images%2Fanonymous-ab4250e6-2c23-434b-8123-396fe48b0d86.png?alt=media&token=59fb1172-b17d-44bf-baee-bb32586381a9"
+    "icon": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/icon-images%2Fanonymous-ab4250e6-2c23-434b-8123-396fe48b0d86.png?alt=media&token=59fb1172-b17d-44bf-baee-bb32586381a9",
+    "category": "Service Business",
+    "features": [
+      "Room inventory with real-time status tracking",
+      "Guest check-in and check-out workflow",
+      "Housekeeping task assignment and checklists",
+      "Guest-facing concierge and service requests",
+      "Reservation management with date tracking",
+      "Staff communication and task notifications",
+      "Amenity and service directory",
+      "Dashboard with occupancy rates and revenue"
+    ]
   },
   {
     "name": "KPI Tracker",
     "slug": "kpi-tracker",
-    "description": "Keep track of your team, their priorities and foster communication internally!",
+    "description": "Track team KPIs, set targets, monitor progress with visual dashboards, and foster accountability across your organization. Configurable for any department or metric.",
+    "longDescription": "The KPI Tracker template gives managers and teams a shared view of what matters most. Define key performance indicators for individuals, teams, or departments. Set targets, log actual values on a regular cadence (daily, weekly, monthly), and visualize progress with charts and trend lines. The dashboard surfaces who's on track, who needs attention, and how the team is performing overall. Includes a discussion thread per KPI for context and updates, turning metrics into conversations. Works for sales targets, marketing metrics, operations KPIs, or any measurable goal. Replace your spreadsheet tracking with a real-time, mobile-accessible performance management tool.",
     "price": 49.99,
     "glideUrl": "https://www.glideapps.com/templates/kpi-tracker-bs",
-    "icon": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/icon-images%2Fanonymous-ec295478-4741-4ef5-b6a1-73a0c1daadf9.png?alt=media&token=827ec039-c21d-474d-ba1c-2658865f0090"
+    "icon": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/icon-images%2Fanonymous-ec295478-4741-4ef5-b6a1-73a0c1daadf9.png?alt=media&token=827ec039-c21d-474d-ba1c-2658865f0090",
+    "category": "Finance & Analytics",
+    "features": [
+      "Custom KPI definitions per team or department",
+      "Target setting with actual vs. goal tracking",
+      "Visual dashboards with charts and trend lines",
+      "Daily, weekly, or monthly tracking cadence",
+      "Discussion threads per KPI for context",
+      "Team and individual performance views",
+      "Color-coded status (on track, at risk, behind)",
+      "Mobile-friendly for on-the-go updates"
+    ]
   },
   {
     "name": "Match Users",
     "slug": "match-users",
-    "description": "The best match making app template, fully responsive and easy to use, by the LowCode Agency team.",
+    "description": "A fully responsive matchmaking app template with user profiles, preference-based matching, chat functionality, and swipe interactions. Ready to customize for any matching use case.",
+    "longDescription": "Match Users is a complete matchmaking application template built for Glide. Users create profiles with photos, bios, and preferences. The matching algorithm surfaces compatible profiles based on configured criteria. Swipe-style interactions let users express interest, and mutual matches unlock a chat feature. The admin panel provides analytics on user activity, match rates, and engagement. While designed as a social matching app, this template is easily adaptable for professional networking, mentorship programs, roommate matching, study groups, or any scenario where you need to connect people based on shared interests or criteria.",
     "price": 49.99,
     "glideUrl": "https://www.glideapps.com/templates/match-users-cy",
-    "icon": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/icon-images%2Fanonymous-bd7d5eab-3794-40b4-9eb9-65f445d0f6fb.png?alt=media&token=29bd107b-171d-4c7f-9d37-28c7a9e280fe"
+    "icon": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/icon-images%2Fanonymous-bd7d5eab-3794-40b4-9eb9-65f445d0f6fb.png?alt=media&token=29bd107b-171d-4c7f-9d37-28c7a9e280fe",
+    "category": "Business Operations",
+    "features": [
+      "User profile creation with photos and bios",
+      "Preference-based matching algorithm",
+      "Swipe interactions for interest expression",
+      "In-app chat for matched users",
+      "Admin analytics on match rates and engagement",
+      "Fully responsive design (mobile + desktop)",
+      "Customizable matching criteria",
+      "Adaptable for networking, mentorship, or social"
+    ]
   },
   {
     "name": "Salon Beauty",
     "slug": "salon-beauty",
-    "description": "Manage and streamline your salon operation.",
+    "description": "Manage salon appointments, client profiles, service menus, and staff schedules in a professional app. Clients can browse services, book appointments, and view their history.",
+    "longDescription": "Salon Beauty is a complete salon management template that handles both the operational and client-facing sides of running a beauty business. Define your service menu with descriptions, durations, and pricing. Manage staff schedules and assign appointments to specific stylists or technicians. Clients get a branded booking experience where they can browse services, select a preferred staff member, pick a time slot, and confirm their appointment. The CRM module stores client preferences, visit history, and notes for personalized service. Ideal for hair salons, nail studios, spas, barbershops, or any appointment-based beauty business.",
     "price": 49.99,
     "glideUrl": "https://www.glideapps.com/templates/salon-beauty-my",
-    "icon": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/icon-images%2Fanonymous-d17a6a18-b3e3-4b4f-8571-884190a83dca.png?alt=media&token=8183fa5c-2e0b-4196-9259-7e15fe6c65f2"
+    "icon": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/icon-images%2Fanonymous-d17a6a18-b3e3-4b4f-8571-884190a83dca.png?alt=media&token=8183fa5c-2e0b-4196-9259-7e15fe6c65f2",
+    "category": "Service Business",
+    "features": [
+      "Service menu with pricing and durations",
+      "Online appointment booking for clients",
+      "Staff schedule and availability management",
+      "Client profiles with visit history and notes",
+      "Appointment reminders and notifications",
+      "Revenue tracking by service and staff member",
+      "Photo gallery of work samples",
+      "Fully branded client-facing experience"
+    ]
   },
   {
     "name": "Jobs Portal",
     "slug": "jobs-portal",
-    "description": "Manage your hiring process more efficiently",
+    "description": "Post job openings, collect applications, screen candidates, and manage your hiring pipeline from a single app. Built for HR teams and recruiters who need a lightweight ATS.",
+    "longDescription": "The Jobs Portal template is a lightweight applicant tracking system (ATS) built on Glide. Post job openings with descriptions, requirements, salary ranges, and locations. Candidates can browse open positions, submit applications with resumes and cover letters, and track their application status. HR teams manage the hiring pipeline with customizable stages (applied, screening, interview, offer, hired, rejected). Each candidate card shows their profile, application materials, interview notes, and rating scores. Generate reports on time-to-hire, source effectiveness, and pipeline health. Perfect for growing companies that have outgrown spreadsheet hiring but don't need a full enterprise ATS like Greenhouse or Lever.",
     "price": 99.99,
     "glideUrl": "https://www.glideapps.com/templates/jobs-portal-ow",
-    "icon": null
+    "icon": null,
+    "category": "HR & Recruiting",
+    "features": [
+      "Job posting with descriptions and requirements",
+      "Candidate application portal",
+      "Resume and cover letter uploads",
+      "Customizable hiring pipeline stages",
+      "Interview notes and candidate scoring",
+      "Application status tracking for candidates",
+      "Hiring reports (time-to-hire, pipeline metrics)",
+      "Team collaboration on candidate reviews"
+    ]
   },
   {
     "name": "Pool Cleaning",
     "slug": "pool-cleaning",
-    "description": "Manage your service based business with this easy to modify pool cleaning template.",
+    "description": "Manage your pool cleaning or field service business with route planning, job scheduling, customer management, technician dispatch, and chemical logging in one app.",
+    "longDescription": "The Pool Cleaning template is purpose-built for field service businesses. Manage your customer base with service addresses, pool specifications, and recurring schedules. Dispatch technicians to jobs with optimized route views. Technicians log their work on-site: chemical readings (pH, chlorine, alkalinity), services performed, photos before/after, and equipment notes. Customers receive service reports automatically. The admin dashboard tracks job completion rates, revenue per route, and technician productivity. While designed for pool service, this template is easily customized for HVAC, lawn care, pest control, plumbing, or any route-based field service operation.",
     "price": 249.99,
     "glideUrl": "https://www.glideapps.com/templates/pool-cleaning-rp",
-    "icon": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/icon-images%2Fanonymous-ca4ff491-1825-4cd2-9ae7-b7ca7465b3f0.png?alt=media&token=52fe9afd-276d-4132-8fff-b6c27423779a"
+    "icon": "https://firebasestorage.googleapis.com/v0/b/glide-prod.appspot.com/o/icon-images%2Fanonymous-ca4ff491-1825-4cd2-9ae7-b7ca7465b3f0.png?alt=media&token=52fe9afd-276d-4132-8fff-b6c27423779a",
+    "category": "Service Business",
+    "features": [
+      "Customer database with pool/site specifications",
+      "Job scheduling and recurring service plans",
+      "Technician dispatch with route optimization",
+      "On-site chemical reading and service logging",
+      "Before/after photo documentation",
+      "Automated customer service reports",
+      "Admin dashboard with productivity metrics",
+      "Adaptable for HVAC, lawn care, pest control, etc."
+    ]
   },
   {
     "name": "Company Dashboard",
     "slug": "company-dashboard",
-    "description": "Empower Your Business with Seamless Management and Communication",
+    "description": "A centralized company dashboard for team communication, announcements, project updates, KPIs, and document sharing. Keep your entire organization aligned in one app.",
+    "longDescription": "The Company Dashboard template serves as your organization's digital headquarters. Post company-wide announcements, share documents and resources, track project updates, and display key metrics — all in a single, accessible app. Team members get a personalized feed based on their department and role. The directory feature lets employees find colleagues, view org charts, and access contact info. Managers can post team updates, celebrate wins, and surface important documents. Includes an events calendar for company meetings, deadlines, and milestones. Ideal for remote teams, growing companies, or any organization that needs a lightweight intranet without the complexity of SharePoint or Notion.",
     "price": 99.99,
     "glideUrl": "https://www.glideapps.com/templates/company-dashboard-so",
-    "icon": null
+    "icon": null,
+    "category": "Business Operations",
+    "features": [
+      "Company announcements and news feed",
+      "Team directory with org chart",
+      "Document and resource library",
+      "Project update tracking per team",
+      "Key metrics and KPI display widgets",
+      "Events calendar with reminders",
+      "Role-based content visibility",
+      "Department-specific channels"
+    ]
   },
   {
     "name": "Maintenance Portal",
     "slug": "maintenance-portal",
-    "description": "Manage your assets and their maintenance issues",
+    "description": "Track assets, log maintenance requests, schedule preventive work orders, and manage your facilities team. Keep equipment running and reduce downtime with organized maintenance workflows.",
+    "longDescription": "The Maintenance Portal template brings order to facility and asset management. Register physical assets (equipment, machinery, vehicles, building systems) with specs, locations, photos, and maintenance history. Staff can submit maintenance requests with descriptions and urgency levels. Facility managers review requests, assign work orders to technicians, and track completion. Set up preventive maintenance schedules so routine inspections and service don't fall through the cracks. The dashboard shows open work orders, overdue tasks, asset health scores, and maintenance spend over time. Works for property management, manufacturing facilities, fleet management, or any organization responsible for maintaining physical assets.",
     "price": 99.99,
     "glideUrl": "https://www.glideapps.com/templates/maintenance-portal-tt",
-    "icon": null
+    "icon": null,
+    "category": "Business Operations",
+    "features": [
+      "Asset registry with specs, photos, and location",
+      "Maintenance request submission portal",
+      "Work order creation and assignment",
+      "Preventive maintenance scheduling",
+      "Technician task management and completion tracking",
+      "Asset maintenance history and audit trail",
+      "Dashboard with open orders and overdue alerts",
+      "Cost tracking per asset and category"
+    ]
   }
 ]

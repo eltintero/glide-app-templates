@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
+import { notFound } from 'next/navigation';
 import { Header, Footer, FeaturedTemplates } from '@/components';
 import { ScreenshotCarousel } from '@/components/ScreenshotCarousel';
 import { getTemplateBySlug, getTemplates, getAllTemplateSlugs } from '@/lib/templates';
@@ -36,7 +37,11 @@ export async function generateMetadata({
       title: `${template.name} - Glide Template | LOW / CODE Agency`,
       description: template.description,
       type: 'website',
-      images: template.icon ? [{ url: template.icon, alt: template.name }] : [],
+      images: getFirstScreenshot(template.slug)
+        ? [{ url: getFirstScreenshot(template.slug)!, alt: `Screenshot of ${template.name} Glide template` }]
+        : template.icon
+          ? [{ url: template.icon, alt: `${template.name} Glide template icon` }]
+          : [],
     },
     twitter: {
       card: 'summary_large_image',
@@ -57,32 +62,58 @@ export default async function TemplatePage({
   const { slug } = await params;
   const template = getTemplateBySlug(slug);
   
-  if (!template) {
-    return (
-      <>
-        <Header />
-        <main className="flex min-h-[60vh] items-center justify-center">
-          <div className="text-center">
-            <h1 className="text-2xl font-bold text-near-black">Template Not Found</h1>
-            <p className="mt-4 text-dark-gray">The template you&apos;re looking for doesn&apos;t exist.</p>
-            <Link href="/templates" className="mt-6 inline-block text-purple-primary hover:underline">
-              Browse all templates
-            </Link>
-          </div>
-        </main>
-        <Footer />
-      </>
-    );
-  }
-  
+  if (!template) notFound();
+
   const screenshots = getScreenshotsForTemplate(slug);
   const allTemplates = getTemplates();
-  const relatedTemplates = allTemplates
-    .filter((t) => t.slug !== template.slug)
-    .slice(0, 3);
+  const sameCategory = allTemplates.filter(
+    (t) => t.slug !== template.slug && t.category === template.category
+  );
+  const relatedTemplates = sameCategory.length >= 3
+    ? sameCategory.slice(0, 3)
+    : [
+        ...sameCategory,
+        ...allTemplates
+          .filter((t) => t.slug !== template.slug && t.category !== template.category)
+          .slice(0, 3 - sameCategory.length),
+      ];
+
+  const productJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: template.name,
+    description: template.description,
+    image: screenshots[0] || template.icon || undefined,
+    brand: { '@type': 'Organization', name: 'LOW / CODE Agency' },
+    offers: {
+      '@type': 'Offer',
+      price: template.price,
+      priceCurrency: 'USD',
+      availability: 'https://schema.org/InStock',
+      url: template.glideUrl,
+    },
+  };
+
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.glideapptemplates.com' },
+      { '@type': 'ListItem', position: 2, name: 'Templates', item: 'https://www.glideapptemplates.com/templates' },
+      { '@type': 'ListItem', position: 3, name: template.name },
+    ],
+  };
   
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <Header />
       <main>
         {/* Breadcrumb */}
@@ -105,17 +136,19 @@ export default async function TemplatePage({
               {/* Left: Screenshot Carousel */}
               <div>
                 {screenshots.length > 0 ? (
-                  <ScreenshotCarousel 
-                    screenshots={screenshots} 
-                    templateName={template.name} 
+                  <ScreenshotCarousel
+                    screenshots={screenshots}
+                    templateName={template.name}
                   />
                 ) : template.icon ? (
                   <div className="overflow-hidden rounded-xl border border-light-gray bg-white">
-                    <div className="flex aspect-[4/3] items-center justify-center p-12">
-                      <img 
-                        src={template.icon} 
-                        alt={template.name}
-                        className="max-h-full max-w-full object-contain"
+                    <div className="relative aspect-[4/3]">
+                      <Image
+                        src={template.icon}
+                        alt={`${template.name} - ${template.category} Glide template by LOW / CODE Agency`}
+                        fill
+                        sizes="(max-width: 1024px) 100vw, 50vw"
+                        className="object-contain p-12"
                       />
                     </div>
                   </div>
@@ -212,15 +245,17 @@ export default async function TemplatePage({
                       {relatedScreenshot ? (
                         <Image
                           src={relatedScreenshot}
-                          alt={t.name}
+                          alt={`Screenshot of ${t.name} Glide template`}
                           fill
+                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                           className="object-cover"
                         />
                       ) : t.icon ? (
                         <Image
                           src={t.icon}
-                          alt={t.name}
+                          alt={`${t.name} - Glide template by LOW / CODE Agency`}
                           fill
+                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                           className="object-contain p-6"
                         />
                       ) : (

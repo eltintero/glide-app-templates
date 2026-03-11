@@ -5,8 +5,11 @@ import { getServices } from '@/lib/services';
 import { ArrowRight } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Custom App Development Services | LOW / CODE Agency',
+  title: 'Custom App Development Services',
   description: 'Custom business apps built 90% faster than traditional development. Internal tools, CRMs, field service apps, and more. Starting at $15,000. 300+ apps delivered since 2020.',
+  alternates: {
+    canonical: '/services',
+  },
   openGraph: {
     title: 'Custom App Development Services | LOW / CODE Agency',
     description: 'Custom business apps built 90% faster than traditional development. Starting at $15,000.',

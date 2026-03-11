@@ -5,9 +5,24 @@ import { Header, Footer } from '@/components';
 import { getTemplates } from '@/lib/templates';
 import { getFirstScreenshot } from '@/lib/screenshots';
 
+const categorySlugMap: Record<string, string> = {
+  'Finance & Analytics': 'finance-analytics',
+  'E-commerce': 'e-commerce',
+  'Education': 'education',
+  'AI & Automation': 'ai-automation',
+  'Real Estate': 'real-estate',
+  'Customer Support': 'customer-support',
+  'Service Business': 'service-business',
+  'HR & Recruiting': 'hr-recruiting',
+  'Business Operations': 'business-operations',
+};
+
 export const metadata: Metadata = {
   title: 'All Glide Templates',
   description: 'Browse our collection of premium Glide templates. Business apps, AI tools, dashboards, and more. Production-ready and fully customizable.',
+  alternates: {
+    canonical: '/templates',
+  },
   openGraph: {
     title: 'All Glide Templates | LOW / CODE Agency',
     description: 'Browse our collection of premium Glide templates. Business apps, AI tools, dashboards, and more.',
@@ -16,10 +31,10 @@ export const metadata: Metadata = {
 
 export default function TemplatesPage() {
   const templates = getTemplates();
-  
+
   // Get unique categories
   const categories = [...new Set(templates.map(t => t.category).filter(Boolean))];
-  
+
   return (
     <>
       <Header />
@@ -35,22 +50,23 @@ export default function TemplatesPage() {
             </p>
           </div>
         </section>
-        
-        {/* Filters */}
+
+        {/* Category filters as links */}
         <section className="border-b border-light-gray bg-white py-4">
           <div className="mx-auto max-w-7xl px-6">
             <div className="flex flex-wrap items-center gap-3">
               <span className="text-sm font-medium text-dark-gray">Categories:</span>
-              <button className="rounded-full bg-purple-primary px-4 py-1.5 text-sm font-medium text-white">
+              <span className="rounded-full bg-purple-primary px-4 py-1.5 text-sm font-medium text-white">
                 All
-              </button>
+              </span>
               {categories.map((category) => (
-                <button
+                <Link
                   key={category}
+                  href={`/templates/category/${categorySlugMap[category!] || 'business-operations'}`}
                   className="rounded-full border border-light-gray px-4 py-1.5 text-sm font-medium text-dark-gray transition-colors hover:border-purple-primary hover:text-purple-primary"
                 >
                   {category}
-                </button>
+                </Link>
               ))}
             </div>
           </div>
@@ -85,15 +101,17 @@ function TemplateCard({ template }: { template: ReturnType<typeof getTemplates>[
         {screenshot ? (
           <Image
             src={screenshot}
-            alt={template.name}
+            alt={`Screenshot of ${template.name} - ${template.category} Glide template`}
             fill
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
             className="object-cover"
           />
         ) : template.icon ? (
           <Image
             src={template.icon}
-            alt={template.name}
+            alt={`${template.name} - ${template.category} Glide template by LOW / CODE Agency`}
             fill
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
             className="object-contain p-8"
           />
         ) : (
